@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <% if(signupMessage){ %>
+        <div><%= signupMessage %></div>
+    <% } %>
+    <h1>Registro</h1>
+    <form action="/registro" method="post">
+        <input type="email" name="email" placeholder="Ingresa tu correo" required>
+        <input type="password" name="password" placeholder="contraseña" required>
+        <select name="date">
+            <option value="marihuana">Marihuana</option>
+        </select>
+        <input type="date" name="date" required>
+        <input type="text" name="name" required placeholder="Nombre">
+        <input type="text" name="lastname" required placeholder="Apellidos">
+        <button type="submit">Crear</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+.navbar-brand{
+    width: 65px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color:gray;
+}
+
+.form-control{
+    width: 100%;
+}
+
+.container{
+    margin: auto;
+}
+
+.formulario{
+    width: 40%;
+    border-radius: 10px;
+    padding: 50px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-text{
+    text-decoration: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.btn{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media (max-width:901px) {
+    .formulario{
+        width: 80%;
+        margin-top: 50px;
+        padding: 40px;
+    }
+}

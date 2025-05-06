@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    height: 350vh;
+    position: relative;
+    
+}
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer{
+    background-color: #24262B;
+    padding: 80px 0;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00C3FF;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li  p{
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li p:hover{
+    color: #ffffff;
+    padding-left: 6px;
+}
+
+.footer-links ul li  a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: #ffffff;
+    padding-left: 6px;
+}
+.social-links a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+}
+
+.logo{
+    height: 100px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.item a{
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #F2F2F2;
+    list-style: none;
+}
+
+.item a:hover{
+    color: #FF2258;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+.btn a{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #00C3FF;
+    color: #f2f2f2;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.btn a:hover{
+    background-color: #038ab3;
+}
+
+
+.Info {
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    padding:0;
+    width: 100%;
+    margin: 0;
+}
+
+.Info p {
+    text-align: justify;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: "monserrat-regular";
+}
+
+
+.Info img{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url("/img/Fondo.jpeg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        width: 100%; 
+    position: static;
+}
+
+.link img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover; 
+    border: 6px solid black;
+    display: block;
+    margin: 0 auto; 
+}
+
+.contenido {
+    padding: 50px;
+}
+
+
+
+.tipos {
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    padding: 30px;
+    align-content: center;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.link {
+    align-items: center;
+    margin: 20px 10px 0 10px;
+    padding-bottom: 10px;
+    width: 260px;
+    
+}
+
+.link h3 {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider{
+    width: 300px;
+    max-width: 100vw;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+}
+.list img{
+    width: 300px;
+    max-width: 100vw;
+    height: 400px;
+    object-fit: cover;
+}
+
+.buttons{
+    position:absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.dots li.active{
+    width: 30px;
+
+}
+
+.Fondo{
+    height: 10vh;
+    width: 100%; 
+    position: static;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+    background-image: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5));
+}
+
+.titulo-text{
+    text-align: left;
+    position: absolute;
+    top: 13%;
+    left: 7%;
+    padding: auto;
+    transform: translateY(-80%);
+    color: white;
+    text-align: left;
+    z-index: 2;
+    text-shadow: 0 30px 50px black;
+}
+
+.titulo-text h1{
+    font-size: 70px;
+}
+.titulo-text h3{
+    font-size: 50px;
+}
+
+@media (max-width:991px){  
+    body{
+        height: 405vh;
+    }
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .menu{
+        padding: 30px;
+        margin: 0;
+    }
+    label{
+        display: initial;
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .item{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    .btn{
+        width: 100px;
+    }
+    #menu:checked ~ .menu{
+        display: initial;
+    }
+    .Info, .tipos {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .contenido{
+        padding: 10px;
+        font-weight: 500;
+    }
+    .Info h1 {
+        font-size: 35px;
+    }
+
+    .Info p {
+        font-size: 22px;
+    }
+
+    .Info img, .link img {
+        height: 200px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

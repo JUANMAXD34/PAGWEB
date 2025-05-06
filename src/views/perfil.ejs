@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Navbar</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <h1>hola pipol</h1>
+    <div id="contador"></div>
+    <div class="container">
+    <div class="progress">
+        <div id="progress-bar-year" class="progress-bar bg-primary" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="10"></div>
+        <span id="text-años">Años: 0</span>
+    </div>
+    <div class="progress">
+        <div id="progress-bar-success" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="12"></div>
+        <span id="text-meses">Meses: 0</span>
+    </div>
+
+    <div class="progress">
+        <div id="progress-bar-success-dias" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="365"></div>
+        <span id="text-dias">Dias: 0</span>
+    </div>
+    <div class="progress">
+        <div id="progress-bar-info" class="progress-bar bg-info" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="24"></div>
+        <span id="text-horas">Horas: 0</span>
+    </div>
+    <div class="progress">
+        <div id="progress-bar-warning" class="progress-bar bg-warning" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="60"></div>
+        <span id="text-minutos">Minutos: 0</span>
+    </div>
+    <div class="progress">
+        <div id="progress-bar-danger" class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="60"></div>
+        <span id="text-segundos">Segundos: 0</span>
+    </div>
+</div>
+
+    <script>
+        function actualizarDias(){
+            fetch("/contador/<%= user._id %>")
+            .then(Response=> Response.json())
+            .then(data=>{
+                document.getElementById("text-años").innerText = `Años: ${data.años}`;
+                document.getElementById("text-meses").innerText = `Meses: ${data.meses}`;
+                document.getElementById("text-dias").innerText = `Dias: ${data.dias}`;
+                document.getElementById("text-horas").innerText = `Horas: ${data.horas}`;
+                document.getElementById("text-minutos").innerText = `Minutos: ${data.minutos}`;
+                document.getElementById("text-segundos").innerText = `Segundos: ${data.segundos}`;
+
+                document.getElementById("progress-bar-year").style.width = `${(data.años / 10) * 100}%`;
+                document.getElementById("progress-bar-success").style.width = `${(data.meses / 12) * 100}%`; 
+                document.getElementById("progress-bar-success-dias").style.width = `${(data.dias / 365) * 100}%`; 
+                document.getElementById("progress-bar-info").style.width = `${(data.horas / 24) * 100}%`;
+                document.getElementById("progress-bar-warning").style.width = `${(data.minutos / 60) * 100}%`;
+                document.getElementById("progress-bar-danger").style.width = `${(data.segundos / 60) * 100}%`;
+            });
+        }
+        setInterval(actualizarDias,1000);
+        actualizarDias();
+    </script>
+    <a href="/logout">Cerrar sesion</a>
+</body>
+</html>

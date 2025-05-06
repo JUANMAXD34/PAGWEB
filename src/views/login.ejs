@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a href="/">
+      <img class="navbar-brand" src="/img/logo.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Inicio
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CIJ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre nosotros</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+        <form method="post" action="/login" class="formulario">
+          <div class="container">
+            <% if(signinMessage.length>0){ %>
+                <div class="alert alert-danger">
+                    <%= signinMessage %>
+                </div>
+            <% } %>
+          </div>
+          <div class="form-group">
+            <h3>Login</h3>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Correo electronico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electronico*" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña*" name="password" required>
+            <a id="emailHelp" class="form-text text-muted" href="/restablecer">Restablecer contraseña</a>
+          </div>
+          <a href="/registro" class="link">¿No tienes cuenta? Crea una</a>
+          <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+        <script src="/javascript/navbar.js"></script>
+</body>
+</html>

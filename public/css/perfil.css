@@ -1,0 +1,38 @@
+
+.progress {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    height: 55px;
+    margin: auto;
+    width: 60%;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+span {
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.progress-bar {
+    font-size: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px; 
+    color: white;
+} 
+
+@media (max-width:991px){
+    .progress{
+        width: 90%;
+        height: 50px;
+    }
+    .progress-bar{
+        font-size: 16px; 
+    }
+}

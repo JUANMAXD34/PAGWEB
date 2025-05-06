@@ -1,0 +1,45 @@
+.navbar-brand{
+    width: 65px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    /*color: rgba(151, 148, 148, 0.707);*/
+    color: gray;
+}
+
+.formulario{
+    width: 40%;
+    border-radius: 10px;
+    padding: 50px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.formulario h2{
+    text-align: center;
+    color: black;
+}
+
+.formulario label{
+    width: 100%;
+    font-size: 20px;
+}
+
+.formulario input{
+    margin-top: 15px;
+    width: 80%;
+    font-size: 15px;
+    height: 35px;
+}
+
+.btn{
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+}

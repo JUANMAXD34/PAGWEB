@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer-contraseña</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/restablecer.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img class="navbar-brand" src="/img/logo.png"></img>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CIJ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form action="/restablecer" method="post" class="formulario">
+        <h2>Restablecer contraseña</h2>
+        <label for="email">Recuperar contraseña</label>
+        <input type="email" name="email" id="user_email">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="volver">
+            <p><a href="/Inicio">Iniciar sesión</a></p>
+        </div>
+    </form>
+</body>
+</html>
