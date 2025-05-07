@@ -27,12 +27,12 @@
 
 .formulario label{
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .formulario input{
     margin-top: 15px;
-    width: 80%;
+    width: 100%;
     font-size: 15px;
     height: 35px;
 }
@@ -42,4 +42,8 @@
     width: 100%;
     font-size: 15px;
     padding: 10px;
+}
+
+.volver a{
+    text-decoration: none;
 }

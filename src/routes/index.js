@@ -32,6 +32,10 @@ router.post("/login",passport.authenticate("local-inicio",{
 
 router.get("/restablecer", (req,res,next)=>{
     res.render("restablecer");
+});
+
+router.get("/CIJ",(req,res,next)=>{
+    res.render("cij");
 })
 
 router.get("/logout",(req,res,next)=>{

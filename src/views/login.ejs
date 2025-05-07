@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
       <a href="/">
       <img class="navbar-brand" src="/img/logo.png">
@@ -44,19 +45,47 @@
           </div>
           <div class="form-group">
             <h3>Login</h3>
+            <p id="emailHelp" class="form-text text-muted">Todos los campos marcados con * son obligarios</p>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Correo electronico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electronico*" name="email" required>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*Correo electronico" name="email" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña*" name="password" required>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*Contraseña" name="password" required>
             <a id="emailHelp" class="form-text text-muted" href="/restablecer">Restablecer contraseña</a>
           </div>
           <a href="/registro" class="link">¿No tienes cuenta? Crea una</a>
           <button type="submit" class="btn btn-primary">Ingresar</button>
         </form>
+
+        <footer class="footer">
+          <div class="contenedor">
+              <div class="footer-row">
+                  <div class="footer-links">
+                      <h4>Ayuda</h4>
+                      <ul>
+                          <li><p>CIJ</p></li>
+                          <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
+                      </ul>
+                  </div>
+                  <div class="footer-links">
+                      <h4>Nosotros</h4>
+                      <ul>
+                          <li><a href="sobrenosotros.html">Información</a></li>
+                      </ul>
+                  </div>
+                  <Div class="footer-links">
+                      <h4>Redes Sociales</h4>
+                      <div class="social-links">
+                          <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
+                          <a href="https://www.facebook.com/share/16Jc1o31Er/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+                      </div>
+                  </Div>
+              </div>
+          </div>
+      </footer>
         <script src="/javascript/navbar.js"></script>
 </body>
 </html>

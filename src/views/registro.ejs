@@ -3,23 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="icon" href="/img/logo.png">
 </head>
 <body>
-    <% if(signupMessage){ %>
-        <div><%= signupMessage %></div>
-    <% } %>
-    <h1>Registro</h1>
-    <form action="/registro" method="post">
-        <input type="email" name="email" placeholder="Ingresa tu correo" required>
-        <input type="password" name="password" placeholder="contraseña" required>
-        <select name="date">
-            <option value="marihuana">Marihuana</option>
-        </select>
-        <input type="date" name="date" required>
-        <input type="text" name="name" required placeholder="Nombre">
-        <input type="text" name="lastname" required placeholder="Apellidos">
-        <button type="submit">Crear</button>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a href="/">
+                <img class="navbar-brand" src="/img/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CIJ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre nosotros</a>
+                </li>
+            </ul>
+            </div>
+            </div>
+        </nav>
+    
+    <form action="/registro" method="post" class="formulario">
+        <div class="container">
+            <% if(signupMessage.length>0){ %>
+                <div class="alert alert-danger">
+                    <%= signupMessage %>
+                </div>
+            <% } %>
+        </div>
+        <h1>Registro</h1>
+        <p id="emailHelp" class="form-text text-muted">Todos los campos marcados con * son obligarios</p>
+        <label for="exampleInputPassword1">Nombre de Usuario</label>
+        <input type="text" name="name" placeholder="*Usuario">
+        <label for="exampleInputPassword1">Correo electronico</label>
+        <input type="email" name="email" placeholder="*Correo electronico" >
+        <label for="exampleInputPassword1">Contraseña</label>
+        <input type="password" name="password" placeholder="*contraseña" >
+        <button type="submit" class="btn btn-primary" id="btn">Crear</button>
+        <dialog id="modal" class="cuadro">
+            <div class="guardar">
+            <label for="exampleInputPassword1" class="form-label mt-4">¿Qué estas dejando?</label>
+            <select class="form-select" id="exampleSelect1">
+                <option>Marihuana</option>
+                <option>Tabaco</option>
+                <option>Vape</option>
+                <option>Alcohol</option>
+                <option>LSD</option>
+                <option>Fentanilo</option>
+                <option>Cristal</option>  
+                <option>Cocaina</option>
+                <option>Perico</option>
+                <option>Tussi</option>        
+                <option>Extasis</option>  
+                <option>Monas</option>
+            </select>
+            <label for="exampleInputPassword1">Nombre de Usuario</label>
+            <input type="date" name="date" required>
+            <input type="submit" id="cerrar">
+            </div>
+        </dialog>
     </form>
+    <script src="/javascript/mostrar.js"></script>
 </body>
 </html>

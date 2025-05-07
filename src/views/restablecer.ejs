@@ -22,10 +22,10 @@
                     </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CIJ</a>
+                        <a class="nav-link" href="/CIJ">CIJ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre nosotros</a>
@@ -36,11 +36,11 @@
     </nav>
     <form action="/restablecer" method="post" class="formulario">
         <h2>Restablecer contraseña</h2>
-        <label for="email">Recuperar contraseña</label>
-        <input type="email" name="email" id="user_email">
+        <label for="email">Ingresa tu correo para restablecer la contraseña</label>
+        <input type="email" name="email" id="user_email" placeholder="*Correo electronico" required>
         <button type="submit" class="btn btn-primary">Enviar</button>
         <div class="volver">
-            <p><a href="/Inicio">Iniciar sesión</a></p>
+            <p><a href="/login">Iniciar sesión</a></p>
         </div>
     </form>
 </body>
