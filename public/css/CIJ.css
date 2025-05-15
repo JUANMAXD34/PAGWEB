@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 160vh;
+    height: 400vh;
     position: relative;
     
 }
@@ -27,51 +27,77 @@ body{
     color:gray;
 }
 
-.form-control{
+.fondo{
+    background-image: url(/img/logito.png);
     width: 100%;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    position: relative;
+    filter: blur(0.1px);
 }
 
-.container{
-    margin: auto;
+.fondo-texto{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
 }
 
-.formulario{
-    width: 40%;
+.cuerpo-texto {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    text-align: justify;
+    flex-wrap: wrap;
+}
+
+.texto {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding: 30px;
     border-radius: 10px;
-    padding: 50px;
-    margin: auto;
-    margin-top: 30px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.formulario input{
-    width: 100%;
-    font-size: 17px;
-    height: 35px
+.texto:first-child {
+    flex: 2; 
 }
 
-.formulario label{
-    font-size: 18px;
+.texto:last-child {
+    flex: 1;
 }
 
-.form-group{
-    margin-bottom: 20px;
-}
 
-.form-text{
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.link{
-    text-decoration: none;
-}
-
-.btn{
-    margin-top: 15px;
-    width: 100%;
+.texto p{
     font-size: 20px;
+    font-family: "monserrat";
     padding: 10px;
+}
+
+.texto h1{
+    padding: 10px;
+    border-bottom: solid 1px black;
+}
+
+.texto h3{
+    padding: 10px;
+    border-bottom: solid 1px black;
+}
+
+.texto img{
+    height: auto; 
+    width: 100%; 
+    max-width: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .contenedor{
@@ -155,13 +181,6 @@ ol,ul{
 }
 
 @media (max-width:901px) {
-    .formulario{
-        width: 80%;
-        margin-top: 50px;
-        padding: 40px;
-        box-sizing: border-box;
-        margin-bottom: 150px;
-    }
     .footer-row{
         text-align: center;
     }
@@ -169,11 +188,20 @@ ol,ul{
         width: 100%;
         margin-bottom: 30px;
     }
-    .menu{
-        padding: 30px;
-        margin: 0;
+    .fondo {
+        height: 250px;
+        background-size: contain;
     }
-    body{
-        height: 200vh;
+    .cuerpo-texto {
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto {
+        width: 100%;
+        padding: 18px;
+        margin: auto;
+    }
+    .texto p{
+        font-size: 17px;
     }
 }

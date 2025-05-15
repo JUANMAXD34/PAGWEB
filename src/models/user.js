@@ -6,7 +6,7 @@ const userSchema = new Schema({
     email: String,
     password: String, 
     username: {type: String, default:null},
-    addiction: {type:Date, default:null}, 
+    addiction: {type:String, default:null}, 
     fecha_inicio: {type:Date, default:null},
     token: {type:String , default:null}  
 });

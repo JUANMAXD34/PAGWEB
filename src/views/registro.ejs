@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/registro.css">
     <link rel="icon" href="/img/logo.png">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a href="/">
                 <img class="navbar-brand" src="/img/logo.png">
@@ -45,17 +46,19 @@
         </div>
         <h1>Registro</h1>
         <p id="emailHelp" class="form-text text-muted">Todos los campos marcados con * son obligarios</p>
-        <label for="exampleInputPassword1">Nombre de Usuario</label>
-        <input type="text" name="name" placeholder="*Usuario">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nombre de Usuario</label>
+            <input type="text" name="name" placeholder="*Usuario" class="form-control">
+        </div>
         <label for="exampleInputPassword1">Correo electronico</label>
-        <input type="email" name="email" placeholder="*Correo electronico" >
+        <input type="email" name="email" placeholder="*Correo electronico" class="form-control">
         <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" name="password" placeholder="*contraseña" >
+        <input type="password" name="password" placeholder="*contraseña" class="form-control">
+        <a href="inicio.html" class="link">¿Tienes una cuenta? Inicia sesion</a>
         <button type="submit" class="btn btn-primary" id="btn">Crear</button>
         <dialog id="modal" class="cuadro">
-            <div class="guardar">
             <label for="exampleInputPassword1" class="form-label mt-4">¿Qué estas dejando?</label>
-            <select class="form-select" id="exampleSelect1">
+            <select class="form-select" id="exampleSelect1" name="adiccion">
                 <option>Marihuana</option>
                 <option>Tabaco</option>
                 <option>Vape</option>
@@ -69,12 +72,44 @@
                 <option>Extasis</option>  
                 <option>Monas</option>
             </select>
-            <label for="exampleInputPassword1">Nombre de Usuario</label>
-            <input type="date" name="date" required>
-            <input type="submit" id="cerrar">
+            <label for="exampleInputPassword1" class="form-label mt-4">¿Cuándo fue tu fecha de inicio de sobriedad?</label>
+            <input type="date" name="date" id="datePicker" class="form-control" required>
+            <p id="emailHelp" class="form-text text-muted">Tu información es completamente confidencial y no será compartida. No tengas pena, la rehabilitación es un paso valiente y admirable.</p>
+            <div class="botones">
+                <button type="submit" class="boton">Guardar</button>
+                <button type="submit" id="cerrar" class="boton-cerrar">Cerrar</button>
             </div>
         </dialog>
     </form>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><p>CIJ</p></li>
+                        <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li><a href="sobrenosotros.html">Información</a></li>
+                    </ul>
+                </div>
+                <Div class="footer-links">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1AG9MrcwXR/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </Div>
+            </div>
+        </div>
+    </footer>
+
     <script src="/javascript/mostrar.js"></script>
+    <script src="/javascript/navbar.js"></script>
 </body>
 </html>

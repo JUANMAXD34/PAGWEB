@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -6,13 +7,172 @@
 }
 
 body{
-    height: 350vh;
+    height: 450vh;
     position: relative;
     
 }
+
+.navbar{
+    background-color: #24262B;
+}
+
+.navbar-brand{
+    width: 65px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color:gray;
+}
+
+.fondo{
+    background-image: url(/img/Fondo.jpeg);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.fondo-texto{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+.cuerpo-texto{
+    padding: 40px;
+    text-align: justify;
+}
+
+.texto{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.texto-info img{
+    height: auto; 
+    width: 100%; 
+    max-width: 400px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.texto p{
+    font-size: 20px;
+    font-family: "monserrat";
+    padding: 10px;
+}
+
+.cuerpo-texto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    text-align: justify;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.texto-info {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-info p{
+    font-size: 20px;
+    font-family: "monserrat";
+}
+
+.texto-info:first-child {
+    flex: 2.9; 
+}
+
+.texto-info:last-child {
+    flex: 1;
+}
+
+.texto-link { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    width: 70%; 
+    padding: 20px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    margin-bottom: 40px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+} 
+.informacion { 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; width: 100%; 
+} 
+.informacion h2{
+    margin-bottom: 20px; 
+} 
+.link { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+} 
+.link a {
+    text-decoration: none; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 270px;
+    height: 210px; 
+    margin: auto;
+} 
+.link img { 
+    width: 270px; 
+    height: 180px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+} 
+.link img:hover { 
+    transform: scale(1.1);
+} 
+.link p { 
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 23px;
+    font-family: "monserrat-black"; 
+    color: #24262B;
+}
+
+.link p:hover{
+    color:gray;
+}
+
 .contenedor{
     max-width: 1200px;
     margin: 0 auto;
+}
+ol,ul{
+    padding-left: 0px;
 }
 
 .footer{
@@ -44,7 +204,7 @@ body{
 }
 
 .footer-links ul li  p{
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     color: #BBBBBB;
     display: block;
@@ -70,6 +230,10 @@ body{
     color: #ffffff;
     padding-left: 6px;
 }
+.footer-links img{
+    width: 200px;
+    height: 200px;
+}
 .social-links a{
     display: inline-block;
     min-height: 40px;
@@ -83,149 +247,6 @@ body{
     transition: all .5s ease;
 }
 
-
-header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    height: 100px;
-}
-
-.logo{
-    height: 100px;
-}
-
-.menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.item a{
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #F2F2F2;
-    list-style: none;
-}
-
-.item a:hover{
-    color: #FF2258;
-}
-
-#menu{
-    display: none;
-}
-
-.menu-icono{
-    width: 25px;
-}
-
-label{
-    cursor: pointer;
-    display: none;
-}
-
-.btn a{
-    padding: 10px 24px;
-    border-radius: 30px;
-    background-color: #00C3FF;
-    color: #f2f2f2;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-}
-
-.btn a:hover{
-    background-color: #038ab3;
-}
-
-
-.Info {
-    background-color: #F2F2F2;
-    box-sizing: border-box;
-    padding:0;
-    width: 100%;
-    margin: 0;
-}
-
-.Info p {
-    text-align: justify;
-    font-size: 25px;
-    margin-bottom: 20px;
-    font-family: "monserrat-regular";
-}
-
-
-.Info img{
-    background-image: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)),
-        url("/img/Fondo.jpeg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 80vh;
-        width: 100%; 
-    position: static;
-}
-
-.link img {
-    width: 220px;
-    height: 150px;
-    object-fit: cover; 
-    border: 6px solid black;
-    display: block;
-    margin: 0 auto; 
-}
-
-.contenido {
-    padding: 50px;
-}
-
-
-
-.tipos {
-    background-color: #F2F2F2;
-    box-sizing: border-box;
-    padding: 30px;
-    align-content: center;
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-}
-
-.link {
-    align-items: center;
-    margin: 20px 10px 0 10px;
-    padding-bottom: 10px;
-    width: 260px;
-    
-}
-
-.link h3 {
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-
-.link a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .slider{
     width: 300px;
     max-width: 100vw;
@@ -233,6 +254,9 @@ label{
     margin: auto;
     position: relative;
     overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 0;
 }
 .list{
     position: absolute;
@@ -241,6 +265,7 @@ label{
     height: 100%;
     display: flex;
     width: max-content;
+    width: 100%;
 }
 .list img{
     width: 300px;
@@ -294,44 +319,13 @@ label{
 
 }
 
-.Fondo{
-    height: 10vh;
-    width: 100%; 
-    position: static;
-    overflow: hidden;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: static;
-    background-image: linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5));
+.texto-info h2{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
 }
 
-.titulo-text{
-    text-align: left;
-    position: absolute;
-    top: 13%;
-    left: 7%;
-    padding: auto;
-    transform: translateY(-80%);
-    color: white;
-    text-align: left;
-    z-index: 2;
-    text-shadow: 0 30px 50px black;
-}
-
-.titulo-text h1{
-    font-size: 70px;
-}
-.titulo-text h3{
-    font-size: 50px;
-}
-
-@media (max-width:991px){  
-    body{
-        height: 405vh;
-    }
+@media (max-width:901px) {
     .footer-row{
         text-align: center;
     }
@@ -339,59 +333,55 @@ label{
         width: 100%;
         margin-bottom: 30px;
     }
-    .menu{
-        padding: 30px;
-        margin: 0;
-    }
-    label{
-        display: initial;
-    }
-    .menu{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #323337;
-        display: none;
-    }
-    .item{
-        margin: 0 0 20px 0;
+    .texto-link {
         width: 100%;
     }
-    .btn{
-        width: 100px;
+    .informacion {
+        width: 100%;
     }
-    #menu:checked ~ .menu{
-        display: initial;
+    .link {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .Info, .tipos {
-        width: 90%;
-        margin: 5% auto;
+    .link img {
+        width: 121px;
+        height: 80px;
     }
-
-    .contenido{
-        padding: 10px;
-        font-weight: 500;
+    .fondo {
+        height: 250px;
+        background-size: cover;
     }
-    .Info h1 {
-        font-size: 35px;
+    .fondo-texto {
+        font-size: 18px;
+        text-align: left;
+        margin-right: auto;
     }
-
-    .Info p {
-        font-size: 22px;
+    .texto {
+        width: 100%;
+        padding: 18px;
     }
-
-    .Info img, .link img {
-        height: 200px;
+    .link a{
+        width: 120px;
+        height: 124px;
     }
-
-    .row {
+    .link p{
+        font-size: 15px;
+    }
+    .cuerpo-texto-info {
         flex-direction: column;
         align-items: center;
     }
-
-    .link {
+    .texto-info {
         width: 100%;
-        margin: 10px 0;
+        padding: 18px;
+        margin: auto;
+    }
+    .cuerpo-texto{
+        padding: 20px;
+    }
+    .texto p{
+        font-size: 17px;
+    }
+    .texto-info p{
+        font-size: 17px;
     }
 }

@@ -7,3 +7,6 @@ btn.addEventListener("click",()=>{
 cerrar.addEventListener("click",()=>{
     modal.close();
 })
+
+let today = new Date().toISOString().split("T")[0];
+    document.getElementById("datePicker").setAttribute("max", today);

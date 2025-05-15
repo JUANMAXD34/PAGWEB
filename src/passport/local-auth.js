@@ -33,7 +33,8 @@ passport.use("local-registro", new LocalStrategy({
             Newuser.email= email;
             Newuser.password = Newuser.encryptPassword(password);
             Newuser.fecha_inicio = req.body.date;
-    
+            Newuser.username = req.body.name;
+            Newuser.addiction = req.body.adiccion;
         await Newuser.save();
         done(null,Newuser);
         transporter.sendMail(emailOption, (error, info)=>{

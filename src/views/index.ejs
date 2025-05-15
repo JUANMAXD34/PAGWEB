@@ -2,37 +2,60 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header id="Header">
-        <img src="/img/logo.png" alt="Logo" class="logo">
-        <input type="checkbox"  id="menu"/>
-        <label for="menu">
-            <img src="img/menu.png" alt="" class="menu-icono">
-        </label>
-        <ul class="menu">
-            <li class="item"><a href="/">Inicio</a> </li>
-            <li class="item"><a href="#">Nosotros</a></li>
-            <li class="btn"><a href="/login">login</a></li>
-        </ul>
-    </header>
-    
-
-    <div class="Info">
-        <div class="imagen">
-            <img src="" alt="Fondo" class="Fondo">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a href="/">
+                <img class="navbar-brand" src="/img/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CIJ">CIJ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="titulo-text">
-            <h1>MyDrugs</h1>
-            <h3>Prevenccion de adicciones y cuidado personal.</h3>
+    </nav>
+    <div class="cuerpo">
+        <div class="fondo">
+            <div class="fondo-texto">
+                <h1 class="titulo">MyDrugs</h1>
+                <h3>Prevencion de adicciones y cuidado personal.</h3>
+            </div>
         </div>
-        <div class="contenido">
-            <div class="slider">
+        <div class="cuerpo-texto-info">
+            <div class="texto-info">
+                <p>
+                    Las adicciones pueden afectar a cualquier persona, independientemente de su edad o entorno. La prevención es clave para evitar el consumo de sustancias perjudiciales y desarrollar hábitos saludables que fortalezcan el bienestar físico y emocional. <br>
+                    La educación y la concienciación son esenciales para prevenir el consumo de drogas, alcohol y tabaco. Las familias, escuelas y comunidades desempeñan un papel fundamental en la promoción de valores y estrategias que ayuden a evitar la dependencia de sustancias.
+                </p>
+                <img src="/img/prevencion.png" alt="Prenvencion de adicciones y cuidado personal" class="imagen">
+                <label id="emailHelp" class="form-text text-muted">La prevención de adicciones y el cuidado personal no solo protegen la salud, sino que también fortalecen la calidad de vida.</label>
+            </div>
+            <div class="texto-info">
+                <h2>Campañas</h2>
+                <div class="slider">
                 <div class="list">
                     <div class="item">
                         <img src="/img/metanfetamina.png">
@@ -60,72 +83,92 @@
                     <li></li>
                     <li></li>
                     <li></li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-    </div>
-    <div class="tipos">
-        <h3>Tipos de drogas y cuidado personal</h3>
-        <div class="row">
-            <div class="link">
-                <a href="tipos-harihuana.html">
-                <img src="/img/adicciones22.jpg" alt="">
-                <h3>Marihuana</h3>
-                </a>
-                <a href="tipos-harihuana.html">
-                <img src="/img/Vapeadores.jpg" alt="Vapeadores">
-                <h3>Vapeadores</h3>
-                </a>
+        </div>
+        <div class="cuerpo-texto">
+            <div class="texto-link">
+                <div class="informacion">
+                    <h2>Información</h2>
+                    <div class="link">
+                        <a href="">
+                            <img src="/img/alcohol.jpeg" alt="Informacion sobre Alcohol">
+                            <p>Alcohol</p>
+                        </a>
+                        <a href="">
+                            <img src="/img/tabaco-vapeadores.jpeg" alt="Informacion sobre Tabaco y vapeadores">
+                            <p>Tabaco y vapeadores</p>
+                        </a>
+                    </div>
+                    <div class="link">
+                        <a href="">
+                            <img src="/img/Marihuana.jpeg" alt="">
+                            <p>Marihuana</p>
+                        </a>
+                        <a href="">
+                            <img src="/img/alcohol.jpeg" alt="">
+                            <p>Cuidado personal</p>
+                        </a>
+                    </div>
+                    <div class="link">
+                        <a href="">
+                            <img src="/img/alcohol.jpeg" alt="">
+                            <p>Cocaina</p>
+                        </a>
+                        <a href="">
+                            <img src="/img/alcohol.jpeg" alt="">
+                            <p>Metanfetamina</p>
+                        </a>
+                    </div>
+                    <div class="link">
+                        <a href="">
+                            <img src="/img/alcohol.jpeg" alt="">
+                            <p>Centros de ayuda</p>
+                        </a>
+                        <a href="">
+                            <img src="/img/alcohol.jpeg" alt="">
+                            <p>Otro tipo de drogas</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="link">
-                <a href="tipos-harihuana.html">
-                <img src="/img/adicciones22.jpg" alt="">
-                <h3>Tabaco</h3>
-                </a>
-                <a href="tipos-harihuana.html">
-                <img src="/img/alcohol.jpeg" alt="alcohol">
-                <h3>Alcohol</h3>
-                </a>
-            </div>
-            <div class="link">
-                <a href="tipos-harihuana.html">
-                <img src="/img/adicciones22.jpg" alt="">
-                <h3>Otras sustancias</h3>
-                </a>
-                <a href="tipos-harihuana.html">
-                <img src="/img/adicciones22.jpg" alt="">
-                <h3>Consecuencias</h3>
-                </a>
+            <div class="texto">
+                <p>
+                    Las adicciones pueden afectar a cualquier persona, independientemente de su edad o entorno. La prevención es clave para evitar el consumo de sustancias perjudiciales y desarrollar hábitos saludables que fortalezcan el bienestar físico y emocional. <br>  <br>
+                    La educación y la concienciación son esenciales para prevenir el consumo de drogas, alcohol y tabaco. Las familias, escuelas y comunidades desempeñan un papel fundamental en la promoción de valores y estrategias que ayuden a evitar la dependencia de sustancias. <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum optio voluptas non facere temporibus sit consequuntur nesciunt, sint cum error reprehenderit maiores eligendi esse similique quaerat rem ducimus laborum qui.
+                </p>
             </div>
         </div>
     </div>
-
     <footer class="footer">
         <div class="contenedor">
             <div class="footer-row">
                 <div class="footer-links">
-                    <h4>ayuda</h4>
+                    <h4>Ayuda</h4>
                     <ul>
-                        <li><p>Centro de ayuda</p></li>
-                        <li><p>394832843243243</p></li>
+                        <li><a href="/CIJ">CIJ</a></li>
+                        <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Nosotros</h4>
                     <ul>
-                        <li><a href="sobrenosotros.html">Informacion</a></li>
+                        <li><a href="sobrenosotros.html">Información</a></li>
                     </ul>
                 </div>
                 <Div class="footer-links">
                     <h4>Redes Sociales</h4>
                     <div class="social-links">
                         <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/16Jc1o31Er/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/share/1AG9MrcwXR/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
                     </div>
                 </Div>
             </div>
         </div>
     </footer>
-    <script src="/javascript/script.js"></script>
+    <script src="/javascript/navbar.js"></script>
     <script src="/javascript/carrusel.js"></script>
 </body>
 </html>
