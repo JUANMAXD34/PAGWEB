@@ -9,6 +9,17 @@ router.get("/", (req,res,next)=>{
     res.render("index")
 });
 
+router.get("/Nosotros",(req,res,next)=>{
+    res.render("nosotros")
+})
+
+router.get("/tipos-marihuana", (req,res,next)=>{
+    res.render("tipos-marihuana");
+})
+
+router.get("/tipos-alcohol", (req,res,next)=>{
+    res.render("tipos-alcohol");
+})
 
 router.get("/registro", (req,res,next)=>{
     res.render("registro")
@@ -108,7 +119,7 @@ router.post("/restablecer", async(req,res)=>{
 router.get("/restablecer/:token", async (req,res)=>{
     const { token } = req.params;
     const user = await User.findOne({token:token});
-    if(user.length===0){
+    if(!user){
         return res.status(404).send("Token inválido o no encontrado");
     }
     const email = user.email;
@@ -264,6 +275,7 @@ router.post("/cambiar", async(req,res)=>{
     }
 
     user.password=user.encryptPassword(password);
+    user.token=null;
     await user.save();
 
     const emailOption={

@@ -10,10 +10,12 @@ p{
 }
 
 body{
-    height: 450vh;
+    height: 350vh;
     position: relative;
     background-color: #cccccc;
 }
+
+/*Parte del navbar, fondo y texto del fondo*/
 
 .navbar{
     background-color: #24262B;
@@ -41,36 +43,33 @@ body{
 }
 
 .fondo{
-    background-image: url(/img/cannabis.jpg);
-    width: 100%;
-    height: 400px;
+    background-image: url(/img/alcohol.avif);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     position: relative;
+    background-color:    #F2E9DF   ;
+    width: 100%;
+    height: 400px;
 }
 
 .fondo-texto{
     text-align: left;
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 20%;
     transform: translate(-50%,-50%);
-    color: whitesmoke;
-}
-
-.fondo-texto h3{
-    font-size: 30px;
-}
+    color: black;
+}´
 
 .titulo{
     font-size: 50px;
+    text-shadow: 2px 2px;
 }
 
-.cuerpo-texto{
-    padding: 20px;
-    text-align: justify;
-}
+/*Parte del navbar, fondo y texto del fondo*/
+
+/*Base de texto creo xd*/
 
 .texto{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
@@ -81,6 +80,7 @@ body{
     margin: auto;
     margin-top: 20px;
     background-color: white;
+    text-align: justify;
 }
 
 .texto p{
@@ -88,6 +88,13 @@ body{
     line-height: 1.5;
     font-size: 115%;
 }
+
+.texto h3{
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+}
+
+/*Base de texto creo xd*/
 
 .inicio {
     display: flex;
@@ -97,8 +104,9 @@ body{
 .inicio img {
     width: 30%;
     height: auto;
-    margin-left: 20px;
-    margin-top: 10vh;
+    margin:auto;
+    margin-left: 30px;
+    border: 1px solid black;
 }
 
 .inicio .texto-inicio {
@@ -106,12 +114,7 @@ body{
 }
 
 .texto-inicio h3{
-    padding: 10px;
-    border-bottom: solid 2px black;
-}
-
-.texto h3{
-    padding: 10px;
+    padding-bottom: 10px;
     border-bottom: solid 2px black;
 }
 
@@ -123,10 +126,6 @@ body{
     list-style: square;
 }
 
-.texto-inicio h3{
-    margin-top: 10px;
-}
-
 .texto-desarrollo{
     width: 85%;
 }
@@ -134,6 +133,16 @@ body{
 .texto-desarrollo h3{
     margin-top: 10px;
 }
+
+.texto-desarrollo ul{
+    padding-left: 20px;
+}
+
+.texto-desarrollo li{
+    list-style: square;
+}
+
+/*Footer nomas*/
 
 .contenedor{
     max-width: 1200px;
@@ -215,9 +224,12 @@ ol,ul{
     transition: all .5s ease;
 }
 
+/*Footer nomas*/
+
+/*Media query (Responsivo)*/
 @media (max-width:901px) {
     body{
-        height: 600vh;
+        height: 480vh;
     }
     .nav-link{
         padding-left: 20px;
@@ -237,6 +249,7 @@ ol,ul{
         font-size: 18px;
         left: 50%;
         text-align: center;
+        color: rgb(0, 0, 0);
     }
     .fondo-texto h3{
         font-size: 30px;
@@ -264,9 +277,12 @@ ol,ul{
     .inicio .texto-inicio {
         width: 100%;
     }
+
     .inicio img {
         width: 80%;
-        margin-left: 0;
+        margin-left: 0px;
         margin-top: 20px;
+        margin: auto;
     }
 }
+/*Media query (Responsivo)*/

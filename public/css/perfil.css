@@ -26,6 +26,9 @@ span {
     padding: 5px; 
     color: white;
 } 
+h3{
+    text-align: center;
+}
 
 @media (max-width:991px){
     .progress{
