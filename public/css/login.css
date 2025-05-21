@@ -177,3 +177,8 @@ ol,ul{
         height: 200vh;
     }
 }
+@media (max-height:1344px) {
+    body{
+        height: 180vh;
+    }
+}

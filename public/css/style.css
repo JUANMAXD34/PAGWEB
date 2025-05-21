@@ -338,6 +338,11 @@ ol,ul{
     margin-bottom: 20px;
     border-bottom: 2px solid black;
 }
+@media (max-height:1344px) {
+    body{
+        height: 600vh;
+    }
+}
 
 @media (max-width:901px) {
     .nav-link{
