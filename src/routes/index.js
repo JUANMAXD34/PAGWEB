@@ -21,7 +21,7 @@ router.get("/tipos-alcohol", (req,res,next)=>{
     res.render("tipos-alcohol");
 })
 
-router.get("/registro", (req,res,next)=>{
+router.get("/registro",sesion, (req,res,next)=>{
     res.render("registro")
 });
 
@@ -31,7 +31,7 @@ router.post("/registro", passport.authenticate("local-registro", {
     passReqToCallback: true
 }))
 
-router.get("/login", (req,res,next)=>{
+router.get("/login",sesion,(req,res,next)=>{
     res.render("login")
 });
 
@@ -64,6 +64,8 @@ router.get("/perfil",isAuthenticated, (req,res,next)=>{
     }
     res.render("perfil", { user: req.user }); 
 });
+
+
 
 router.get("/contador/:userId", async(req,res)=>{
     const user = await User.findById(req.params.userId);
@@ -302,5 +304,12 @@ function isAuthenticated(req,res,next){
     }
     res.redirect("/login");
 };
+
+function sesion(req,res,next){
+    if(!req.user){
+        return next();
+    }
+    res.redirect("/perfil")
+}
 
 module.exports=router;
