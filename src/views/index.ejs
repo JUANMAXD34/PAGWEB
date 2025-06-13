@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a href="/">
-                <img class="navbar-brand" src="/img/icondrugs-removebg-preview.png">
+            <a href="/" class="navbar-brand">
+                <img class="navbar-brand" src="/img/logo.png">
+                MyDrugs
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,144 +26,158 @@
                         <a class="nav-link" href="/CIJ">CIJ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/Login">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="cuerpo">
-        <div class="fondo">
-            <div class="fondo-texto">
-                <h1 class="titulo">MyDrugs</h1>
-                <h3>Prevencion de adicciones y cuidado personal.</h3>
+    <div class="slider-box">
+        <div class="texto-slider">
+            <h1>MyDrugs</h1>
+            <h3>Prevencion de adicciones y cuidado personal.</h3>
+            <p>Tenemos como objetivo conscientizar sobre los efectos de las drogas, riesgos y consecuencias. Tambien promover el cuidado personal, prevenir el consumo de drogas y ofrecer recursos de ayuda.</p>
+        </div>
+        <ul>
+            <li>
+                <img src="/img/fondo2.png" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="cuerpo-texto">
+        <div class="texto">
+            <div class="texto-desarrollo">
+                <h3>Decide hoy y cuida tu futuro.</h3>
+                <p>
+                    Las adicciones pueden afectar a cualquier persona, sin importar su edad o entorno. La prevención es esencial para evitar el consumo de sustancias perjudiciales y fomentar hábitos saludables.
+                    <br>
+                    La educación y la concienciación juegan un papel clave en la prevención de drogas, alcohol y tabaco. Familias, escuelas y comunidades deben promover valores y estrategias que ayuden a evitar la dependencia. Además, generar espacios de diálogo y brindar apoyo emocional son fundamentales para construir un entorno seguro y saludable.
+                </p>
             </div>
         </div>
-        <div class="cuerpo-texto-info">
-            <div class="texto-info">
-                <p>
-                    Las adicciones pueden afectar a cualquier persona, independientemente de su edad o entorno. La prevención es clave para evitar el consumo de sustancias perjudiciales y desarrollar hábitos saludables que fortalezcan el bienestar físico y emocional. <br>
-                    La educación y la concienciación son esenciales para prevenir el consumo de drogas, alcohol y tabaco. Las familias, escuelas y comunidades desempeñan un papel fundamental en la promoción de valores y estrategias que ayuden a evitar la dependencia de sustancias.
-                </p>
-                <img src="/img/prevencion.png" alt="Prenvencion de adicciones y cuidado personal" class="imagen">
-                <label id="emailHelp" class="form-text text-muted">La prevención de adicciones y el cuidado personal no solo protegen la salud, sino que también fortalecen la calidad de vida.</label>
-            </div>
-            <div class="texto-info">
-                <h2>Campañas</h2>
+        <div class="texto">
+            <div class="inicio">
+                <div class="texto-inicio">
+                    <h3>Campañas de Prevencion de adicciones</h3>
+                    <p>Las campañas de prevención de adicciones del gobierno federal buscan informar y concientizar a la población sobre los riesgos del consumo de sustancias adictivas. A través de estrategias educativas, difusión en medios y programas comunitarios, se busca reducir el impacto de las drogas en la sociedad y promover entornos saludables. Estas iniciativas incluyen actividades en escuelas, apoyo psicológico y el fortalecimiento del tejido social para evitar el consumo y sus consecuencias.
+                        <br><br>
+                    Se pretende concientizar a la población sobre los riesgos del consumo de drogas. Estas iniciativas incluyen la capacitación de docentes, campañas en medios de comunicación y estudios nacionales para mejorar la prevención. Además, se han implementado programas específicos en distintas regiones del país con el objetivo de proteger a niños y jóvenes.
+                    </p>
+                </div>
                 <div class="slider">
                 <div class="list">
                     <div class="item">
-                        <img src="/img/metanfetamina.png">
+                        <img src="/img/informacion.jpg">
                     </div>
                     <div class="item">
-                        <img src="/img/Efectos-metan.png">
+                        <img src="/img/informacion.2.jpg">
                     </div>
                     <div class="item">
-                        <img src="/img/Info.png">
+                        <img src="/img/informacion3.jpg">
                     </div>
                     <div class="item">
-                        <img src="/img/metanfetanima2.png">
+                        <img src="/img/informacion4.jpg">
                     </div>
                     <div class="item">
-                        <img src="/img/metanfetamina.png">
+                        <img src="/img/informacion5.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/img/informacion6.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="/img/informacion7.jpg">
                     </div>
                 </div>
                 <div class="buttons">
                     <button id="prev"><</button>
                     <button id="next">></button>
                 </div>
-                <ul class="dots">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    </ul>
                 </div>
             </div>
         </div>
-        <div class="cuerpo-texto">
-            <div class="texto-link">
-                <div class="informacion">
-                    <h2>Información</h2>
-                    <div class="link">
-                        <a href="/tipos-alcohol">
-                            <img src="/img/alcohol.jpeg" alt="Informacion sobre Alcohol">
-                            <p>Alcohol</p>
-                        </a>
-                        <a href="">
-                            <img src="/img/tabaco-vapeadores.jpeg" alt="Informacion sobre Tabaco y vapeadores">
-                            <p>Tabaco y vapeadores</p>
-                        </a>
-                    </div>
-                    <div class="link">
-                        <a href="/tipos-marihuana">
-                            <img src="/img/Marihuana.jpeg" alt="Marihuana informacion">
-                            <p>Marihuana</p>
-                        </a>
-                        <a href="">
-                            <img src="/img/cuidado personal-info.jpg" alt="Cuidado personal informacion">
-                            <p>Cuidado personal</p>
-                        </a>
-                    </div>
-                    <div class="link">
-                        <a href="">
-                            <img src="/img/cocaina-info.jpg" alt="Cocaina Informacion">
-                            <p>Cocaina</p>
-                        </a>
-                        <a href="">
-                            <img src="/img/metanfetamina-info.jpg" alt="Alcohol informacion">
-                            <p>Metanfetamina</p>
-                        </a>
-                    </div>
-                    <div class="link">
-                        <a href="">
-                            <img src="/img/centros de ayuda-info.avif" alt="Centros de ayuda informacion">
-                            <p>Centros de ayuda</p>
-                        </a>
-                        <a href="">
-                            <img src="/img/otro tipo de drogas-info.jpg" alt="Informacion sobre otro tipo de drogas">
-                            <p>Otro tipo de drogas</p>
-                        </a>
-                    </div>
-                </div>
+        <div class="informacion">
+            <h3>Información</h3>
+            <p>
+                En este apartado encontrarás información detallada sobre diversas sustancias como marihuana, vapeadores, tabaco y alcohol. Aprenderás sobre sus efectos, riesgos y consecuencias para la salud, así como medidas de prevención para reducir su consumo. Nuestro objetivo es brindarte datos confiables y actualizados para que puedas tomar decisiones informadas sobre el impacto de estas sustancias en tu bienestar. Además, te proporcionaremos recursos y estrategias para fomentar hábitos saludables y prevenir adicciones.
+            </p>
+            <div class="link">
+                <a href="/alcohol">
+                    <img src="/img/alcohol.jpeg" alt="Informacion sobre Alcohol">
+                    <p>Alcohol</p>
+                </a>
+                <a href="/tabaco">
+                    <img src="/img/tabaco-vapeadores.jpeg" alt="Informacion sobre Tabaco y vapeadores">
+                    <p>Tabaco y vapeadores</p>
+                </a>
             </div>
-            <div class="texto">
+            <div class="link">
+                <a href="/marihuana">
+                    <img src="/img/Marihuana.jpeg" alt="Marihuana informacion">
+                    <p>Marihuana</p>
+                </a>
+                <a href="/cuidado">
+                    <img src="/img/cuidado personal-info.jpg" alt="Cuidado personal informacion">
+                    <p>Cuidado personal</p>
+                </a>
+            </div>
+            <div class="link">
+                <a href="/cocaina">
+                    <img src="/img/cocaina-info.jpg" alt="Cocaina Informacion">
+                    <p>Cocaina</p>
+                </a>
+                <a href="/metanfetamina">
+                    <img src="/img/metanfetamina-info.jpg" alt="Alcohol informacion">
+                    <p>Metanfetamina</p>
+                </a>
+            </div>
+            <div class="link">
+                <a href="/centros">
+                    <img src="/img/centros de ayuda-info.avif" alt="Centros de ayuda informacion">
+                    <p>Centros de ayuda</p>
+                </a>
+                <a href="/otros">
+                    <img src="/img/otro tipo de drogas-info.jpg" alt="Informacion sobre otro tipo de drogas">
+                    <p>Otro tipo de drogas</p>
+                </a>
+            </div>
+        </div>
+        <div class="texto">
+            <div class="texto-desarrollo">
+                <h3>¿Qué ofrecemos?</h3>
                 <p>
-                    Las adicciones pueden afectar a cualquier persona, independientemente de su edad o entorno. La prevención es clave para evitar el consumo de sustancias perjudiciales y desarrollar hábitos saludables que fortalezcan el bienestar físico y emocional. <br>  <br>
-                    La educación y la concienciación son esenciales para prevenir el consumo de drogas, alcohol y tabaco. Las familias, escuelas y comunidades desempeñan un papel fundamental en la promoción de valores y estrategias que ayuden a evitar la dependencia de sustancias. <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum optio voluptas non facere temporibus sit consequuntur nesciunt, sint cum error reprehenderit maiores eligendi esse similique quaerat rem ducimus laborum qui.
+                    En nuestro sitio encontrarás información detallada sobre diversas sustancias como marihuana, vapeadores, tabaco, alcohol y más. Nuestro objetivo es brindarte datos confiables y herramientas para la prevención de adicciones, ayudándote a tomar decisiones informadas sobre tu bienestar.
+                    <br><br>
+                    Además, ponemos a tu disposición información sobre <a href="/centros">centros de apoyo</a>, donde podrás encontrar ayuda profesional en caso de necesitar orientación o acompañamiento, como el <a href="/CIJ">Centro de Integración Juvenil (CIJ)</a>. También contamos con un apartado especial donde podrás llevar un seguimiento personalizado sobre qué sustancias estás dejando de consumir, permitiéndote visualizar tu progreso y fortalecer tu compromiso con una vida más saludable. 
+                    <br><br>
+                    Este apartado de seguimiento diseñado para ayudarte en tu proceso de dejar el consumo de sustancias. Sabemos que el camino hacia una vida libre de adicciones puede ser desafiante, por lo que este espacio te permitirá registrar tu progreso, establecer metas y visualizar los avances que has logrado.
+                    <br><br>
+                    <a href="/login" class="texto-desarrollo-link">¿Listo para dar el primer paso? Empieza ahora y observa tu evolución hacia una vida libre de adicciones.</a>
                 </p>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4>Ayuda</h4>
-                    <ul>
-                        <li><a href="/CIJ">CIJ</a></li>
-                        <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Nosotros</h4>
-                    <ul>
-                        <li><a href="/Nosotros">Información</a></li>
-                    </ul>
-                </div>
-                <Div class="footer-links">
-                    <h4>Redes Sociales</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/16Jc1o31Er/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </Div>
-            </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
+        <ul class="social-icon">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/mydrugs_addiction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/CIJ">CIJ</a></li>
+        </ul>
+        <p>@2025 MyDrugs | All Rights Reserved</p>
     </footer>
-    <script src="/javascript/navbar.js"></script>
-    <script src="/javascript/carrusel.js"></script>
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/carrusel.js"></script>
+    <script src="javascript/texto.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

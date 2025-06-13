@@ -7,34 +7,31 @@
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="icon" href="/img/logo.png">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a href="/">
+            <a href="/" class="navbar-brand">
                 <img class="navbar-brand" src="/img/logo.png">
+                MyDrugs
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Inicio
-                        <span class="visually-hidden">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">CIJ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre nosotros</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CIJ">CIJ</a>
+                    </li>
+                </ul>
             </div>
-            </div>
-        </nav>
+        </div>
+    </nav>
     
     <form action="/registro" method="post" class="formulario">
         <div class="container">
@@ -54,7 +51,7 @@
         <input type="email" name="email" placeholder="*Correo electronico" class="form-control">
         <label for="exampleInputPassword1">Contraseña</label>
         <input type="password" name="password" placeholder="*contraseña" class="form-control">
-        <a href="inicio.html" class="link">¿Tienes una cuenta? Inicia sesion</a>
+        <a href="/login" class="link">¿Tienes una cuenta? Inicia sesion</a>
         <button type="submit" class="btn btn-primary" id="btn">Crear</button>
         <dialog id="modal" class="cuadro">
             <label for="exampleInputPassword1" class="form-label mt-4">¿Qué estas dejando?</label>
@@ -82,34 +79,28 @@
         </dialog>
     </form>
 
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4>Ayuda</h4>
-                    <ul>
-                        <li><p>CIJ</p></li>
-                        <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Nosotros</h4>
-                    <ul>
-                        <li><a href="/Nosotros">Información</a></li>
-                    </ul>
-                </div>
-                <Div class="footer-links">
-                    <h4>Redes Sociales</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1AG9MrcwXR/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </Div>
-            </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
+        <ul class="social-icon">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/CIJ">CIJ</a></li>
+        </ul>
+        <p>@2025 MyDrugs | All Rights Reserved</p>
     </footer>
 
     <script src="/javascript/mostrar.js"></script>
     <script src="/javascript/navbar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

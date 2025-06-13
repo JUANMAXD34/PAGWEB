@@ -2,91 +2,172 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Perfil</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://bootswatch.com/5/sandstone/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/perfil.css">
 </head>
 <body>
-     <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <a href="/">
-                <img class="navbar-brand" src="/img/logo.png">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Inicio
-                            <span class="visually-hidden">(current)</span>
+    <nav class="sidebar">
+        <header>
+            <div class="text logo">
+                <span class="name">¡Hola <%= user.username %>!</span>
+                <span class="profe"></span>
+            </div>
+            <i class="bx bx-menu toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+
+            <div class="menu">
+                <li class="search-box">
+                    <i class="bx bx-search icon"></i>
+                    <input type="hidden">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text">Inicio</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">Cerrar sesion</a>
+                    <li class="nav-link">
+                        <a href="/CIJ">
+                            <i class="bx bx-clinic icon"></i>
+                            <span class="text nav-text">CIJ</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/cuidado">
+                            <i class="bx bx-happy-alt icon"></i>
+                            <span class="text nav-text">Cuidado Personal</span>
+                        </a>
                     </li>
                 </ul>
             </div>
+
+            <div class="bottom-content">
+
+                <li class="">
+                    <a href="/logout">
+                        <i class="bx bx-log-out"></i>
+                        <span class="text nav-text">Salir</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Modo oscuro</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
         </div>
-      </nav>
-      <div class="titulo">
-        <h3>Has estado libre de alcohol durante</h3>
-      </div>
-    <div class="container">
-    <div class="progress">
-        <div id="progress-bar-year" class="progress-bar bg-primary" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="10"></div>
-        <span id="text-años">Años: 0</span>
-    </div>
-    <div class="progress">
-        <div id="progress-bar-success" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="12"></div>
-        <span id="text-meses">Meses: 0</span>
-    </div>
+    </nav>
+    <section class="home">
+        <div class="text">
+            <div class="texto">
+                <div class="titulo">
+                    <h3>Has estado libre de <%= user.addiction %> durante</h3>
+                </div>
+                <div class="progress" id="progress-year">
+                    <div id="progress-bar-year" class="progress-bar bg-primary" role="progressbar"></div>
+                    <span id="text-años">Años: 0</span>
+                </div>
 
-    <div class="progress">
-        <div id="progress-bar-success-dias" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="365"></div>
-        <span id="text-dias">Días: 0</span>
-    </div>
-    <div class="progress">
-        <div id="progress-bar-info" class="progress-bar bg-info" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="24"></div>
-        <span id="text-horas">Horas: 0</span>
-    </div>
-    <div class="progress">
-        <div id="progress-bar-warning" class="progress-bar bg-warning" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="60"></div>
-        <span id="text-minutos">Minutos: 0</span>
-    </div>
-    <div class="progress">
-        <div id="progress-bar-danger" class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuemin="0" aria-valuemax="60"></div>
-        <span id="text-segundos">Segundos: 0</span>
-    </div>
-</div>
-<div class="elfsight-app-75d1d6d3-b484-48de-8ed6-ca8f1a585485" data-elfsight-app-lazy></div>
+                <div class="progress" id="progress-meses">
+                    <div id="progress-bar-success" class="progress-bar bg-success" role="progressbar"></div>
+                    <span id="text-meses">Meses: 0</span>
+                </div>
 
+                <div class="progress" id="progress-dias">
+                    <div id="progress-bar-success-dias" class="progress-bar bg-success" role="progressbar"></div>
+                    <span id="text-dias">Días: 0</span>
+                </div>
+
+                <div class="progress" id="progress-horas">
+                    <div id="progress-bar-info" class="progress-bar bg-info" role="progressbar"></div>
+                    <span id="text-horas">Horas: 0</span>
+                </div>
+
+                <div class="progress" id="progress-minutos">
+                    <div id="progress-bar-warning" class="progress-bar bg-warning" role="progressbar"></div>
+                    <span id="text-minutos">Minutos: 0</span>
+                </div>
+
+                <div class="progress" id="progress-segundos">
+                    <div id="progress-bar-danger" class="progress-bar bg-danger" role="progressbar"></div>
+                    <span id="text-segundos">Segundos: 0</span>
+                </div>
+            </div>
+            <div class="reinicio">
+                <form action="/reinicio" method="post">
+                    <button type="submit" class="btn btn-primary" id="btn">Crear</button>
+                    <dialog id="modal" class="cuadro">
+                        <label for="exampleInputPassword1" class="form-label mt-4">¿Estás seguro de que quieres reajustar tu fecha de inicio?</label>
+                        <input type="date" name="date" id="datePicker" class="form-control" required>
+                        <label class="texto-modal">No te avergüences de hacerlo. Debes estar orgulloso de intentarlo</label>
+                        <div class="botones">
+                            <button type="submit" class="boton">Guardar</button>
+                            <button type="submit" id="cerrar" class="boton-cerrar">Cerrar</button>
+                        </div>
+                    </dialog>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--Si no me equivoco es el bot xd-->
+    <div class="elfsight-app-75d1d6d3-b484-48de-8ed6-ca8f1a585485" data-elfsight-app-lazy></div>
+
+    <!-- Lo intente poner en un archivo aparte y me mando a la cola >:( -->
     <script>
-        function actualizarDias(){
-            fetch("/contador/<%= user._id %>")
-            .then(Response=> Response.json())
-            .then(data=>{
-                document.getElementById("text-años").innerText = `Años: ${data.años}`;
-                document.getElementById("text-meses").innerText = `Meses: ${data.meses}`;
-                document.getElementById("text-dias").innerText = `Días: ${data.dias}`;
-                document.getElementById("text-horas").innerText = `Horas: ${data.horas}`;
-                document.getElementById("text-minutos").innerText = `Minutos: ${data.minutos}`;
-                document.getElementById("text-segundos").innerText = `Segundos: ${data.segundos}`;
-
-                document.getElementById("progress-bar-year").style.width = `${(data.años / 10) * 100}%`;
-                document.getElementById("progress-bar-success").style.width = `${(data.meses / 12) * 100}%`; 
-                document.getElementById("progress-bar-success-dias").style.width = `${(data.dias / 365) * 100}%`; 
-                document.getElementById("progress-bar-info").style.width = `${(data.horas / 24) * 100}%`;
-                document.getElementById("progress-bar-warning").style.width = `${(data.minutos / 60) * 100}%`;
-                document.getElementById("progress-bar-danger").style.width = `${(data.segundos / 60) * 100}%`;
+        function actualizarDias() {
+            fetch(`/contador/<%= user._id %>`)
+            .then(response => response.json())
+            .then(data => {
+                actualizarBarra("progress-year", "progress-bar-year", data.años, 10);
+                actualizarBarra("progress-meses", "progress-bar-success", data.meses, 12);
+                actualizarBarra("progress-dias", "progress-bar-success-dias", data.dias, 365);
+                actualizarBarra("progress-horas", "progress-bar-info", data.horas, 24);
+                actualizarBarra("progress-minutos", "progress-bar-warning", data.minutos, 60);
+                actualizarBarra("progress-segundos", "progress-bar-danger", data.segundos, 60);
             });
         }
-        setInterval(actualizarDias,1000);
+
+        //la funcion para ir actualizando las barras y no se vea feo xd, tambien las borra si es ns apenas lleva un año obviamente no salga año 0 se ve feo pero ya con esto lo quito
+        function actualizarBarra(idContenedor, idBarra, valor, maximo) {
+            const contenedor = document.getElementById(idContenedor);
+            const barra = document.getElementById(idBarra);
+            //busca el span osea busca dentro del contenedor el span para actualizar el texto si no lo encuentra lo vuelve nulo creo que si se entiende no? xd
+            const texto = contenedor ? contenedor.querySelector("span") : null;
+
+            if (!contenedor || !barra || !texto) return;
+
+            if (valor === 0) {
+                //nomas si es 0 remueve todo
+                contenedor.style.display = "none";
+            } else {
+                //aqui va actualizando la barra y ya xd pero el display ese es para que que vuelva a salir si es 0 mas que nada por los segundos y aja
+                contenedor.style.display = "";
+                barra.style.display = "block";
+                barra.style.width = `${(valor / maximo) * 100}%`;
+            }
+        //Aunque ya no se vea la barrita la va ir actualizando (CREO)
+            texto.innerText = texto.innerText.split(":")[0] + `: ${valor}`; 
+        }
+        //Bueno esto solo va a hacer que se vayan actualizando cada segundo las barritas
+        setInterval(actualizarDias, 1000);
         actualizarDias();
     </script>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <script src="/javascript/navbar.js"></script>
+    <script src="/javascript/mostrar.js"></script>
 </body>
 </html>

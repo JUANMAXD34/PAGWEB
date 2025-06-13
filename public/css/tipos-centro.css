@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+p{
+    margin-bottom: 0px;
+}
+
+body{
+    height: 410vh;
+    position: relative;
+    background-color: #d4cdee;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: #24262B;
+}
+
+.navbar-brand{
+    width: 65px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.1);
+    width: 65px;
+    color: white;
+}
+
+.nav-link{
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover{
+    color:gray;
+    transform: scale(1.1);
+}
+
+.navbar-nav{
+    margin-left: 85%;
+    margin-right: 0px;
+}
+
+.fondo{
+    background-image: url(/img/cannabis.jpg);
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.fondo-texto{
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    color: whitesmoke;
+}
+
+.fondo-texto h3{
+    font-size: 30px;
+}
+
+.titulo{
+    font-size: 50px;
+}
+
+.cuerpo-texto{
+    padding: 20px;
+    text-align: justify;
+}
+
+.texto{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    padding: 30px;
+    width:90%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.texto p{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    font-size: 115%;
+    font-weight: 400;
+}
+
+.inicio {
+    display: flex;
+    align-items: flex-start;
+}
+
+.inicio img {
+    width: 30%;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 10vh;
+}
+
+.inicio .texto-inicio {
+    width: 70%;
+}
+
+.texto-inicio h3{
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.texto h3{
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.texto-inicio ul{
+    padding-left: 20px;
+}
+
+.texto-inicio li{
+    list-style: square;
+}
+
+.texto-inicio h3{
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.texto-desarrollo{
+    width: 90%;
+}
+
+.texto-desarrollo h3{
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.texto-desarrollo iframe{
+    display: block;
+    margin: auto;
+}
+
+ol, ul{
+    padding-left: 0px;
+}
+footer{
+    position: relative;
+    width: 100%;
+    background: #5299b7;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+footer .social-icon,footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social-icon li,footer .menu li{
+    list-style: none;
+}
+
+footer .social-icon li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social-icon li a:hover{
+    transform: translateY(-10px);
+}
+
+footer .menu li a{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover{
+    opacity: 1;
+}
+
+footer p{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/img/wave-centros.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation:  animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation:  animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation:  animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation:  animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+@media (max-width:901px) {
+    body{
+        height: 440vh;
+    }
+    .nav-link{
+        padding-left: 20px;
+    }
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .fondo {
+        height: 350px;
+        background-size: cover;
+    }
+    .fondo-texto {
+        font-size: 18px;
+        left: 50%;
+        text-align: center;
+    }
+    .fondo-texto h3{
+        font-size: 30px;
+    }
+    .titulo{
+        font-size: 45px;
+    }
+    .cuerpo-texto{
+        padding: 0px;
+    }
+    .texto p{
+        font-size: 15px;
+    }
+    .texto .texto-desarrollo {
+        width: 100%;
+        padding: 0px;
+        overflow-wrap: break-word;
+        font-size: 15px;
+    }
+    .inicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inicio .texto-inicio {
+        width: 100%;
+    }
+    .inicio img {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .texto-desarrollo iframe{
+        width: 100%;
+        height: 350px;
+        border: 0;
+    }
+}

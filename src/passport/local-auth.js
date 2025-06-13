@@ -29,6 +29,10 @@ passport.use("local-registro", new LocalStrategy({
     if(user){
         return done(null,false,req.flash("signupMessage","Ya existe una cuenta con este email"))
     }else{
+        const fechaActual = new Date(req.body.date);
+        const utcOffset = -6 * 60 * 60 * 1000;
+        const fechaUtc = new Date(fechaActual.getTime() + utcOffset);
+
         const Newuser=new User()
             Newuser.email= email;
             Newuser.password = Newuser.encryptPassword(password);

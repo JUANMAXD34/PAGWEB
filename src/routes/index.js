@@ -4,6 +4,7 @@ const passport = require("passport");
 const User = require("../models/user");
 const crypto=require("crypto");
 const transporter = require("../models/nodemailer");
+const user = require("../models/user");
 
 router.get("/", (req,res,next)=>{
     res.render("index")
@@ -13,12 +14,30 @@ router.get("/Nosotros",(req,res,next)=>{
     res.render("nosotros")
 })
 
-router.get("/tipos-marihuana", (req,res,next)=>{
+router.get("/marihuana", (req,res,next)=>{
     res.render("tipos-marihuana");
 })
 
-router.get("/tipos-alcohol", (req,res,next)=>{
+router.get("/alcohol", (req,res,next)=>{
     res.render("tipos-alcohol");
+})
+router.get("/cocaina", (req,res,next)=>{
+    res.render("tipos-cocaina");
+})
+router.get("/metanfetamina", (req,res,next)=>{
+    res.render("tipos-metanfetamina");
+})
+router.get("/tabaco", (req,res,next)=>{
+    res.render("tipos-tabaco");
+})
+router.get("/centros", (req,res,next)=>{
+    res.render("tipos-centros");
+})
+router.get("/otros", (req,res,next)=>{
+    res.render("tipos-otros");
+})
+router.get("/cuidado", (req,res,next)=>{
+    res.render("tipos-cuidado");
 })
 
 router.get("/registro",sesion, (req,res,next)=>{
@@ -81,7 +100,7 @@ router.get("/contador/:userId", async(req,res)=>{
     const años = Math.floor(diferencia / (1000 * 60 * 60 * 24 * 365));
     const meses = Math.floor((diferencia % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30.44));
     const dias = Math.floor((diferencia % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia%(1000*60*60*24)) / (1000*60*60));
+    const horas = Math.floor(((diferencia % (1000 * 60 * 60 * 24)) - (6 * 60 * 60 * 1000) + (1000 * 60 * 60 * 24)) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));    
     const minutos = Math.floor((diferencia%(1000*60*60)) / (1000*60));
     const segundos = Math.floor((diferencia%(1000*60)) / 1000);
     res.json({años,meses,dias,horas,minutos,segundos})
@@ -297,6 +316,18 @@ router.post("/cambiar", async(req,res)=>{
     });
 })
 
+router.post("/reinicio", async (req, res) => {
+    const user = await User.findById(req.user._id);
+    
+    if (!user) {
+        return res.status(404).send("User not found");
+    }
+    const fecha = new Date(req.body.date)
+    user.fecha_inicio = fecha;
+    await user.save();
+    res.redirect("/perfil");
+});
+
 
 function isAuthenticated(req,res,next){
     if(req.isAuthenticated()){
@@ -311,5 +342,7 @@ function sesion(req,res,next){
     }
     res.redirect("/perfil")
 }
+
+
 
 module.exports=router;

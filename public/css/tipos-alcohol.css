@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,30 +11,37 @@ p{
 }
 
 body{
-    height: 350vh;
+    height: 390vh;
     position: relative;
-    background-color: #cccccc;
+    background-color:  #ffdce0;
 }
 
 /*Parte del navbar, fondo y texto del fondo*/
 
 .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); 
     background-color: #24262B;
 }
 
 .navbar-brand{
     width: 65px;
     transition: transform 0.3s ease;
+    color: white;
 }
 
 .navbar-brand:hover{
     transform: scale(1.1);
-    width: 67px;
+    width: 65px;
+    color: white;
 }
 
 .nav-link{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -42,35 +50,14 @@ body{
     transform: scale(1.1);
 }
 
-.fondo{
-    background-image: url(/img/alcohol.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    background-color:    #F2E9DF   ;
-    width: 100%;
-    height: 400px;
-}
-
-.fondo-texto{
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%,-50%);
-    color: black;
-}´
-
-.titulo{
-    font-size: 50px;
-    text-shadow: 2px 2px;
+.navbar-nav{
+    margin-left: 85%;
+    margin-right: 0px;
 }
 
 /*Parte del navbar, fondo y texto del fondo*/
 
 /*Base de texto creo xd*/
-
 .texto{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
     padding: 30px;
@@ -84,14 +71,17 @@ body{
 }
 
 .texto p{
-    font-family:"Open Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.5;
     font-size: 115%;
+    font-weight: 400;
 }
 
 .texto h3{
     padding-bottom: 10px;
     border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 /*Base de texto creo xd*/
@@ -116,6 +106,8 @@ body{
 .texto-inicio h3{
     padding-bottom: 10px;
     border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 .texto-inicio ul{
@@ -131,7 +123,10 @@ body{
 }
 
 .texto-desarrollo h3{
-    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 .texto-desarrollo ul{
@@ -144,88 +139,6 @@ body{
 
 /*Footer nomas*/
 
-.contenedor{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-ol,ul{
-    padding-left: 0px;
-}
-
-.footer{
-    background-color: #24262B;
-    padding: 80px 0;
-    margin-top: auto;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-links{
-    width: 25%;
-    padding: 0 15px;
-}
-.footer-links h4{
-    font-size: 20px;
-    color: #ffffff;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid #00C3FF;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.footer-links ul li  p{
-    font-size: 15px;
-    text-decoration: none;
-    color: #BBBBBB;
-    display: block;
-    margin-bottom: 15px;
-    transition: all .3s ease;
-}
-
-.footer-links ul li p:hover{
-    color: #ffffff;
-    padding-left: 6px;
-}
-
-.footer-links ul li  a{
-    font-size: 18px;
-    text-decoration: none;
-    color: #BBBBBB;
-    display: block;
-    margin-bottom: 15px;
-    transition: all .3s ease;
-}
-
-.footer-links ul li a:hover{
-    color: #ffffff;
-    padding-left: 6px;
-}
-.footer-links img{
-    width: 200px;
-    height: 200px;
-}
-.social-links a{
-    display: inline-block;
-    min-height: 40px;
-    width: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all .5s ease;
-}
-
-/*Footer nomas*/
-
 /*Media query (Responsivo)*/
 @media (max-width:901px) {
     body{
@@ -233,6 +146,9 @@ ol,ul{
     }
     .nav-link{
         padding-left: 20px;
+    }
+    .navbar-nav {
+        margin-left: 0px;
     }
     .footer-row{
         text-align: center;

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyDrugs-Tipos-Alcohol</title>
+    <title>MyDrugs Alcohol</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/tipos-alcohol.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <a href="/">
-                <img class="navbar-brand" src="/img/icondrugs-removebg-preview.png">
+    <nav class="navbar navbar-expand-lg ">        <div class="container-fluid">
+            <a href="/" class="navbar-brand">
+                <img class="navbar-brand" src="/img/logo.png">
+                MyDrugs
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,22 +30,39 @@
                         <a class="nav-link" href="/CIJ">CIJ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/Login">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="cuerpo">
-        <div class="fondo">
-            <div class="fondo-texto">
-                <h1 class="titulo">Alcohol</h1>
-            </div>
+    <div class="slider-box">
+        <div class="texto-slider">
+            <h1>Alcohol</h1>
         </div>
+        <ul>
+            <li>
+                <img src="/img/alcohol2.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/alcohol.avif" alt="">
+            </li>
+            <li>
+                <img src="/img/alcohol3.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/alcohol1.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/vape4.jpg" alt="">
+            </li>
+        </ul>
+    </div>
         <div class="cuerpo-texto">
             <div class="texto">
                 <div class="inicio">
                     <div class="texto-inicio">
+                        <h3>¿Qué es el alcohol?</h3>
                         <p>
                             El alcohol es una de las drogas legales, esta es una droga que afecta al sistema nervioso, hace lento las funciones del cerebro, afecta la capacidad de autocontrol. El principal componente del alcohol es el Etanol o alcohol etílico, que tienen una concentración distinta conforme al tipo de bebida alcohólica. 
                         </p>
@@ -52,7 +71,7 @@
                             Las bebidas alcohólicas pueden ser:
                             <ul>
                                 <li><p>
-                                    Fermentadas: vino,cerveza y sida, estas bebidas tienen una graduación alcohólica en un promedio de 4º y 15º, estas generan una fermentación de sus azúcares.
+                                    Fermentadas: vino, cerveza y sida, estas bebidas tienen una graduación alcohólica en un promedio de 4º y 15º, estas generan una fermentación de sus azúcares.
                                 </p></li>
                                 <li><p>
                                     Destiladas: son aquellas que son destiladas de las bebidas fermentadas, que por lo general tiene mayor concentración de alcohol y rondan el promedio de graduación alcohólica entre 40º y 50º, estas bebidas son el ron, whisky, brandy, ginebra.
@@ -77,7 +96,7 @@
                             <li><p>Afectación de la percepción de los sentidos</p></li>
                             <li><p>Confusión</p></li>
                             <li><p>Trastornos neurológicos</p></li>
-                            <li><p>Cancer (Colon,recto,mama,laringe,higado,esofago,cavidad oral y faringe)</p></li>
+                            <li><p>Cáncer (Colon, recto ,mama, laringe, hígado, esófago, cavidad oral y faringe)</p></li>
                             <li><p>Lesiones intencionales</p></li>
                             <li><p>Depresión</p></li>
                             <li><p>Incapacidad para reaccionar</p></li>
@@ -96,7 +115,7 @@
                             <li><p>La edad: Los jóvenes son más sensibles a los efectos del alcohol, mientras tanto un adulto es más “resistente” a los efectos sedantes y a la descoordinación motora.</p></li>
                             <li><p>La comida: Si se come alimentos grasos, enlentece la intoxicación pero no evita ni reduce los daños.</p></li>
                             <li><p>La cantidad y la rapidez de consumo: La mayor cantidad de alcohol y a menor tiempo, incrementa la posibilidad de intoxicación.</p></li>
-                            <li><p>La combinación con otras sustancias: si se consumen otras sustancias como drogas se potencian los efectos sedantes del alcohol. Cuando se combina con la <a href="tipos-marihuana.html">marihuana</a> se incrementan los efectos de ambas sustancias </p></li>
+                            <li><p>La combinación con otras sustancias: si se consumen otras sustancias como drogas se potencian los efectos sedantes del alcohol. Cuando se combina con la <a href="/marihuana">marihuana</a> se incrementan los efectos de ambas sustancias </p></li>
                         </ul>
                     </p>
                     <h3>¿Qué le hace el alcohol al cuerpo?</h3>
@@ -112,33 +131,27 @@
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4>Ayuda</h4>
-                    <ul>
-                        <li><a href="/CIJ">CIJ</a></li>
-                        <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Nosotros</h4>
-                    <ul>
-                        <li><a href="/Nosotros">Información</a></li>
-                    </ul>
-                </div>
-                <Div class="footer-links">
-                    <h4>Redes Sociales</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/16Jc1o31Er/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </Div>
-            </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
+        <ul class="social-icon">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/mydrugs_addiction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/CIJ">CIJ</a></li>
+        </ul>
+        <p>@2025 MyDrugs | All Rights Reserved</p>
     </footer>
     <script src="/javascript/navbar.js"></script>
+    <script src="/javascript/texto.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

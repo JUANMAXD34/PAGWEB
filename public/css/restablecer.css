@@ -1,14 +1,44 @@
+body{
+    height: 110vh;
+    position: relative;
+    background-color:  #9B27B00D; 
+    text-align: justify;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: #24262B;
+}
+
 .navbar-brand{
     width: 65px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.1);
+    width: 65px;
+    color: white;
 }
 
 .nav-link{
     color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
 }
 
 .nav-link:hover{
-    /*color: rgba(151, 148, 148, 0.707);*/
-    color: gray;
+    color:gray;
+    transform: scale(1.1);
+}
+
+.navbar-nav{
+    margin-left: 90%;
+    margin-right: 0px;
 }
 
 .formulario{
@@ -16,7 +46,8 @@
     border-radius: 10px;
     padding: 50px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 200px;
+    background-color: white;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
@@ -35,6 +66,7 @@
     width: 100%;
     font-size: 15px;
     height: 35px;
+    border-radius: 10px;
 }
 
 .btn{
@@ -42,8 +74,25 @@
     width: 100%;
     font-size: 15px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .volver a{
     text-decoration: none;
+}
+
+@media (max-width:901px) {
+    .formulario{
+        width: 85%;
+        margin-top: 220px;
+        padding: 40px;
+        box-sizing: border-box;
+        margin-bottom: 80px;
+    }
+    .navbar-nav {
+        margin-left: 20px;
+    }
+    body{
+        height: 90vh;
+    }
 }

@@ -6,25 +6,46 @@
 }
 
 body{
-    height: 160vh;
+    height: 122vh;
     position: relative;
     
 }
 
 .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); 
     background-color: #24262B;
 }
 
 .navbar-brand{
     width: 65px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.1);
+    width: 65px;
+    color: white;
 }
 
 .nav-link{
     color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
 }
 
 .nav-link:hover{
     color:gray;
+    transform: scale(1.1);
+}
+
+.navbar-nav{
+    margin-left: 90%;
+    margin-right: 0px;
 }
 
 .form-control{
@@ -40,14 +61,15 @@ body{
     border-radius: 10px;
     padding: 50px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 180px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .formulario input{
     width: 100%;
     font-size: 17px;
-    height: 35px
+    height: 35px;
+    border-radius: 12px;
 }
 
 .formulario label{
@@ -72,6 +94,7 @@ body{
     width: 100%;
     font-size: 20px;
     padding: 10px;
+    border-radius: 15px;
 }
 
 .contenedor{
@@ -156,29 +179,16 @@ ol,ul{
 
 @media (max-width:901px) {
     .formulario{
-        width: 80%;
-        margin-top: 50px;
+        width: 85%;
+        margin-top: 180px;
         padding: 40px;
         box-sizing: border-box;
-        margin-bottom: 150px;
+        margin-bottom: 80px;
     }
-    .footer-row{
-        text-align: center;
-    }
-    .footer-links{
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    .menu{
-        padding: 30px;
-        margin: 0;
+    .navbar-nav {
+        margin-left: 20px;
     }
     body{
-        height: 200vh;
-    }
-}
-@media (max-height:1344px) {
-    body{
-        height: 180vh;
+        height: 110vh;
     }
 }

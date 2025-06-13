@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyDrugs-Tipos-Marihuana</title>
+    <title>MyDrugs Marihuana</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/tipos-marihuana.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a href="/">
-                <img class="navbar-brand" src="/img/icondrugs-removebg-preview.png">
+            <a href="/" class="navbar-brand">
+                <img class="navbar-brand" src="/img/logo.png">
+                MyDrugs
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,23 +31,39 @@
                         <a class="nav-link" href="/CIJ">CIJ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                        <a class="nav-link" href="/Login">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="cuerpo">
-        <div class="fondo">
-            <div class="fondo-texto">
-                <h1 class="titulo">Marihuana</h1>
-                <h3>(Cannabis)</h3>
-            </div>
+    <div class="slider-box">
+        <div class="texto-slider">
+            <h1>Marihuana</h1>
         </div>
+        <ul>
+            <li>
+                <img src="/img/Marihuana-cannabis.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/marihuana.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/marihuana2.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/marihuana3.jpg" alt="">
+            </li>
+            <li>
+                <img src="/img/Marihuana.jpeg" alt="">
+            </li>
+        </ul>
+    </div>
         <div class="cuerpo-texto">
             <div class="texto">
                 <div class="inicio">
                     <div class="texto-inicio">
+                        <h3>¿Qué es la marihuana?</h3>
                         <p>
                         La marihuana es una mezcla verde, marrón o gris de partes desmenuzadas y secas de la planta de marihuana. La planta contiene sustancias químicas que actúan en el cerebro y pueden cambiar su estado de ánimo o conciencia.
                         </p>
@@ -132,33 +151,26 @@
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4>Ayuda</h4>
-                    <ul>
-                        <li><a href="/CIJ">CIJ</a></li>
-                        <li><p>Centro de Atención Ciudadana <br>“La Línea de la Vida”.<br>01800 911 2000</p></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Nosotros</h4>
-                    <ul>
-                        <li><a href="sobrenosotros.html">Información</a></li>
-                    </ul>
-                </div>
-                <Div class="footer-links">
-                    <h4>Redes Sociales</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/mydrugs_addiction?igsh=aThyanBtMHEwaXh4" target="_blank"> <i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/16Jc1o31Er/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </Div>
-            </div>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
+        <ul class="social-icon">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/CIJ">CIJ</a></li>
+        </ul>
+        <p>@2025 MyDrugs | All Rights Reserved</p>
     </footer>
-    <script src="/javascript/navbar.js"></script>
+<script src="/javascript/navbar.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
