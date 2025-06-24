@@ -342,6 +342,7 @@ body{
 }
 
 /*Media query (Responsivo)*/
+
 @media (max-width: 901px) {
     body {
         height: 580vh;

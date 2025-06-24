@@ -11,9 +11,9 @@ p{
 }
 
 body{
-    height: 390vh;
+    height: 360vh;
     position: relative;
-    background-color:#DFF8E7;
+    background-color:#9B27B00D; 
     text-align: justify;
 }
 
@@ -224,11 +224,5 @@ body{
         width: 80%;
         margin-left: 0;
         margin-top: 20px;
-    }
-}
-
-@media (min-width: 1280px) {
-    body{
-        height: 430vh;
     }
 }

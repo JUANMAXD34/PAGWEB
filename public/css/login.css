@@ -177,6 +177,8 @@ ol,ul{
     transition: all .5s ease;
 }
 
+
+
 @media (max-width:901px) {
     .formulario{
         width: 85%;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="icon" href="/img/logo.png">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg ">
@@ -50,7 +51,7 @@
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*Contraseña" name="password" required>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*Contraseña" name="password" required minlength="8" maxlength="12">
             <a id="emailHelp" class="form-text text-muted" href="/restablecer">Restablecer contraseña</a>
           </div>
           <a href="/registro" class="link">¿No tienes cuenta? Crea una</a>

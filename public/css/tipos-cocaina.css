@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ p{
 }
 
 body{
-    height: 460vh;
+    height: 490vh;
     position: relative;
     background-color:white;
     line-height: 1.5;
@@ -30,22 +31,29 @@ body{
 .navbar-brand{
     width: 65px;
     transition: transform 0.3s ease;
+    color: white;
 }
 
 .navbar-brand:hover{
     transform: scale(1.1);
-    width: 67px;
+    width: 65px;
+    color: white;
 }
 
 .nav-link{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     transition: transform 0.3s ease;
 }
 
 .nav-link:hover{
     color:gray;
     transform: scale(1.1);
+}
+
+.navbar-nav{
+    margin-left: 85%;
+    margin-right: 0px;
 }
 
 /*Cuerpo del texto*/
@@ -62,15 +70,18 @@ body{
 }
 
 .texto p{
-    font-family:"Open Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.5;
-    font-size: 110%;
+    font-size: 115%;
+    font-weight: 400;
     text-align: justify;
 }
 
 .texto h3{
     padding-bottom: 10px;
     border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 .inicio {
@@ -104,9 +115,10 @@ body{
 }
 
 .texto-inicio p{
-    font-family:"Open Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.5;
-    font-size: 110%;
+    font-size: 115%;
+    font-weight: 400;
     text-align: justify;
 }
 
@@ -115,7 +127,10 @@ body{
 }
 
 .texto-desarrollo h3{
-    margin-top: 10px;
+     padding-bottom: 10px;
+    border-bottom: solid 2px black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 .texto-desarrollo ul{
@@ -127,13 +142,16 @@ body{
 }
 
 .texto-desarrollo p{
-    font-family:"Open Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.5;
-    font-size: 110%;
+    font-size: 115%;
+    font-weight: 400;
     text-align: justify;
 }
 
 /*Responsive*/
+
+
 @media (max-width:901px) {
     body{
         height: 600vh;

@@ -60,7 +60,7 @@ router.post("/login",passport.authenticate("local-inicio",{
     passReqToCallback: true
 }));
 
-router.get("/restablecer", (req,res,next)=>{
+router.get("/restablecer",sesion, (req,res,next)=>{
     res.render("restablecer");
 });
 
@@ -121,8 +121,27 @@ router.post("/restablecer", async(req,res)=>{
     const emailOption = {
         from: email,
         to: email,
-        subject: "Bienvenido a MyDrugs",
-        html: `<p>Hola</p> <br> <a href='http://localhost:3000/restablecer/${encodedToken}'>Restablecer</a>`
+        subject: "Restablecer Contraseña",
+        html: `<html lang='es'>
+                <body>
+                    <div style='font-family: system-ui, sans-serif, Arial; font-size: 14px; color: #333; padding: 20px 14px; background-color: #f5f5f5;'>
+                        <div style='max-width: 600px; margin: auto; background-color: #fff;'>
+                            <div style='text-align: center; background-color: #333; padding: 14px;'>
+                                <a style='text-decoration: none; outline: none;' href='http://localhost:3000' target='_blank' rel='noopener'>
+                                    <img style='height: 32px; vertical-align: middle;' src='https://i.imgur.com/jl2rWdt.png' alt='logo' height='32px'>
+                                </a>
+                            </div>
+                            <div style='padding: 14px;'>
+                                <h1 style='font-size: 22px; margin-bottom: 26px;'>Ha solicitado un cambio de contraseña</h1>
+                                    <p>Hemos recibido una solicitud para restablecer la contraseña de tu cuenta. Para continuar, haga clic en el botón enlace a continuación para crear una nueva contraseña:</p>
+                                    <p><a href='http://192.168.135.199:3000/restablecer/${encodedToken}'>Restablecer</a></p>
+                                    <p>Si no solicitaste este restablecimiento de contraseña, ignora este correo electrónico o háznoslo saber inmediatamente. Tu cuenta permanece segura.</p>
+                                    <p>Saludos cordiales,<br>MyDrugs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+                </html>`
     };
 
     transporter.sendMail(emailOption, (error, info,res) => {
@@ -342,7 +361,5 @@ function sesion(req,res,next){
     }
     res.redirect("/perfil")
 }
-
-
 
 module.exports=router;
