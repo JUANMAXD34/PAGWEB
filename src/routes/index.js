@@ -347,6 +347,29 @@ router.post("/reinicio", async (req, res) => {
     res.redirect("/perfil");
 });
 
+router.get("/crud", async (req, res) => {
+    const users = await User.find();
+    res.render("crud", { users }); 
+});
+
+router.post("/update/:id", async (req, res) => {
+    await User.findByIdAndUpdate(req.params.id, {
+        email: req.body.correo,
+        username: req.body.nombre,
+        addiction: req.body.adiccion,
+        fecha_inicio: req.body.fechaInicio
+    });
+    res.redirect("/crud");
+});
+
+router.post("/delete/:id", async (req, res) => {
+    await User.findByIdAndDelete(req.params.id);
+    res.redirect("/crud");
+});
+
+
+
+
 
 function isAuthenticated(req,res,next){
     if(req.isAuthenticated()){

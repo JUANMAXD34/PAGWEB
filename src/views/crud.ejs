@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/crud.css">
+</head>
+<body>
+    <h2>Usuarios</h2>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Correo</th>
+                <th>Nombre</th>
+                <th>Adicción</th>
+                <th>Fecha de inicio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+    <tbody>
+        <% const opciones = ["Marihuana","Tabaco","Vape","Alcohol","LSD","Fentanilo","Cristal","Cocaina","Perico","Tussi","Extasis","Monas"]; %>
+        <% users.forEach(user => { %>
+        <tr>
+            <td><%= user.email %></td>
+            <td><%= user.username %></td>
+            <td><%= user.addiction %></td>
+            <td>
+                <% if (user.fecha_inicio) { %>
+                    <%= user.fecha_inicio.toISOString().split('T')[0] %>
+                <% } else { %>
+                    Sin fecha
+                <% } %>
+            </td>
+            <td>
+                <button onclick="abrirModal('<%= user._id %>')">Editar</button>
+                <form action="/delete/<%= user._id %>" method="POST" style="display:inline;">
+                    <button>Eliminar</button>
+                </form>
+            </td>
+        </tr>
+
+        <div id="modal-<%= user._id %>" class="modal">
+            <div class="modal-content">
+                <span class="cerrar" onclick="cerrarModal('<%= user._id %>')">&times;</span>
+                <form action="/update/<%= user._id %>" method="POST">
+                    <h3>Editar Usuario</h3>
+                    <label>Correo:<br>
+                        <input name="correo" value="<%= user.email %>" required>
+                    </label><br><br>
+
+                    <label>Nombre:<br>
+                        <input name="nombre" value="<%= user.username %>" required>
+                    </label><br><br>
+
+                    <label>Adicción:<br>
+                        <select name="adiccion" required>
+                            <% opciones.forEach(op => { %>
+                                <option value="<%= op %>" <%= user.addiction === op ? "selected" : "" %>><%= op %></option>
+                            <% }) %>
+                        </select>
+                    </label><br><br>
+
+                    <label>Fecha de inicio:<br>
+                        <input name="fechaInicio" type="date" value="<%= user.fecha_inicio ? user.fecha_inicio.toISOString().split('T')[0] : '' %>" required>
+                    </label><br><br>
+
+                    <button type="submit">Actualizar</button>
+                    <button type="button" onclick="cerrarModal('<%= user._id %>')">Cancelar</button>
+                </form>
+            </div>
+        </div>
+        <% }) %>
+    </tbody>
+</table>
+
+<script>
+    function abrirModal(id) {
+        document.getElementById(`modal-${id}`).style.display = 'block';
+    }
+
+    function cerrarModal(id) {
+        document.getElementById(`modal-${id}`).style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+        });
+    }
+</script>
+
+</body>
+</html>
